@@ -12,12 +12,12 @@ BEGIN
 	FROM corrections
 	WHERE corrections.user_id = user_id;
     SELECT COUNT(*)
-        INTO projects_count
+        ndex_my_names.sqlINTO projects_count
 	FROM corrections
 	WHERE corrections.user_id = user_id;
 
     UPDATE users
-        SET users.average_score = IF(projects_count == 0, 0, total_score / projects_count)
+        SET users.average_score = IF(projects_count = 0, 0, total_score / projects_count)
 	WHERE user_id = user_id;
 END $$
 DELIMITER ;
