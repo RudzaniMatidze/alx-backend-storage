@@ -12,7 +12,7 @@ BEGIN
 	FROM corrections
 	WHERE corrections.user_id = user_id;
     SELECT COUNT(*)
-        ndex_my_names.sqlINTO projects_count
+        INTO projects_count
 	FROM corrections
 	WHERE corrections.user_id = user_id;
 
